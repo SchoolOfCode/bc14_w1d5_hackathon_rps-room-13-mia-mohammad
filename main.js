@@ -17,15 +17,13 @@ let messages = [
 
 // check user starts with 1 capital letter, followed by 0-9 other letters
 const userNameRegex = /^[A-Z]{1}[A-Za-z]{0,9}$/;
-
 let checkUserName = '';
 let outcome = '';
 
 function getWinner() {
-	// ask if user wants to start game
-	let startGame = confirm('Do you want to start a game?');
 	// prompt to enter username
-	let username = prompt(`Enter a username to start the game 🎲🎲
+	let username = prompt(`Welcome to the rock, papers, scissors, robot game!
+  Enter a username to start 🎲🎲
   Must start with a capital letter and be maximum 10 letters`);
 
 	if (!username.match(userNameRegex)) {
@@ -41,6 +39,9 @@ function getWinner() {
 			}
 		}
 	}
+
+	// ask if user wants to start game
+	let startGame = confirm('Do you want to start a game?');
 
 	while (startGame) {
 		// ask to start a round
